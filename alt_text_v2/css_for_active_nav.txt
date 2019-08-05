@@ -1,0 +1,3 @@
+#page1:target, #page2:target, #page3:target, #page4:target, #page5:target
+
+https://stackoverflow.com/questions/14898015/css-active-link-not-working

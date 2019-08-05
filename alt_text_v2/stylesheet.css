@@ -1,0 +1,115 @@
+body {
+  font-family: Trebuchet, Arial, Helvetica, sans-serif;	
+  text-align: center;
+  background-color:white;
+}
+
+button {
+  width:100px; 
+  height:50px; 
+  border-radius:10px; 
+  background-color:blue;
+}
+
+h1 {
+  text-align:left;
+}
+
+h2 {text-align:left;
+}
+
+textarea {
+  height: 100%;
+  width: 100%;
+  resize: vertical;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+  border-radius: 10px;
+}
+
+#demo {
+  font-weight:bold;
+  text-align:left;
+}
+
+
+
+#leftalign {
+  text-align: left;
+}
+
+#nav {
+}
+
+#page1:target, #page2:target, #page3:target, #page4:target, #page5:target, #page6:target{
+  background: #29abe2;
+  color: #fff;
+}
+
+.divframe {
+  width:80%;
+  float:right;
+}
+
+.divindex {
+  background-color:#ffffff;
+  text-align:left;
+  width:75%;
+  flex-grow:1;
+  float:right;
+  padding-right: 20px;
+  padding-left:20px;
+}
+
+.left {	
+  background-color:lightblue;
+  text-align: center;
+  margin: auto auto 1% auto;
+  max-width: 50%;	
+  border: 6px outset white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button {
+  font-size:150%; 
+  font-weight:bold;
+  color: white;
+}
+
+.large {
+  font-size: 20px;
+  text-align: left;
+}
+
+.vertical-menu {
+  width:20%;
+  text-align:left;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  float:left;
+}
+
+.vertical-menu a {
+  background-color: #ffffff;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #cccccc;
+}
+
+.vertical-menu a.active {
+  background-color:lightgray;
+  color: white;
+}
+
+

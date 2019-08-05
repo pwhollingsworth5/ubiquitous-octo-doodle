@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Interaction 1</title>
+<style>
+body {
+  font-family: sans-serif;
+  background-color: lightgray;	
+  text-align: center;
+}
+
+button {
+  width:100px; 
+  height:50px; 
+  border-radius:10px; 
+  background-color:blue;
+}
+
+textarea {
+  height: 100%;
+  width: 100%;
+  resize: vertical;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+  border-radius: 10px;
+}
+
+#demo {
+  font-weight:bold;
+  text-align:left;
+}
+
+#leftalign {
+  text-align: left;
+}
+
+#nav {
+  background-color:lightgrey;
+  border: 3px solid black;
+}
+
+.divframe {
+  width:80%;
+  float:right;
+}
+
+.divindex {
+  background-color:lightyellow;
+  text-align:left;
+  width:75%;
+  flex-grow:1;
+  float:right;
+  padding-right: 20px;
+  padding-left:20px;
+}
+
+.left {	
+  background-color:lightblue;
+  text-align: center;
+  margin: auto auto 1% auto;
+  max-width: 50%;	
+  border: 6px outset white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button {
+  font-size:150%; 
+  font-weight:bold;
+  color: white;
+}
+
+.large {
+  font-size: 20px;
+  text-align: left;
+}
+
+.vertical-menu {
+  width:20%;
+  text-align:left;
+  border: 6px outset white;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  background-color:lightblue;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  float:left;
+}
+
+.vertical-menu a {
+  background-color: lightblue;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  font-weight:bold;
+  border:1px solid black;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div>
+<div class="left">
+<p><img id="myImg" src="_images/pic5.png" width="55%" height="auto"></p>
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<p class="large">Enter alternative text in the text box below.</p>
+<p id="leftalign"><em><strong>Note:</strong>You can enlarge the height of the text box by dragging the handle in the lower right corner of the text box.</em></p>
+<textarea></textarea>
+<p class="large">Click <strong>Submit</strong> to view your results against suggested solution.</p></div>
+<div class="left"><p id="demo" style="display:none"><em>Enter suggested solution here.</em></p>
+<button  onclick="myFunction()">
+<p class="button">Submit</p>
+<script>
+function myFunction() {
+  document.getElementById('demo').style.display='block';
+}
+</script>
+</button>
+<button onclick="document.location.reload(true)">
+<p class="button">Refresh</p>
+</button></div>
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+body {
+  font-family: sans-serif;
+  background-color: lightgray;	
+  text-align: center;
+}
+
+button {
+  width:100px; 
+  height:50px; 
+  border-radius:10px; 
+  background-color:blue;
+}
+
+
+
+textarea {
+  height: 100%;
+  width: 100%;
+  resize: vertical;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+  border-radius: 10px;
+}
+
+#demo {
+  font-weight:bold;
+  text-align:left;
+}
+
+
+
+#leftalign {
+  text-align: left;
+}
+
+#nav {
+  background-color:lightgrey;
+  border: 3px solid black;
+}
+
+.divframe {
+  width:80%;
+  float:right;
+
+}
+
+.divindex {
+  background-color:lightyellow;
+  text-align:left;
+  width:75%;
+  flex-grow:1;
+  float:right;
+  padding-right: 20px;
+  padding-left:20px;
+}
+
+.left {	
+  background-color:lightblue;
+  text-align: center;
+  margin: auto auto 1% auto;
+  max-width: 50%;	
+  border: 6px outset white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button {
+  font-size:150%; 
+  font-weight:bold;
+  color: white;
+}
+
+.large {
+  font-size: 20px;
+  text-align: left;
+}
+
+.vertical-menu {
+  width:20%;
+  text-align:left;
+  border: 6px outset white;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  background-color:lightblue;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  float:left;
+}
+
+.vertical-menu a {
+  background-color: lightblue;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  font-weight:bold;
+  border:1px solid black;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
